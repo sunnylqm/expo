@@ -23,6 +23,7 @@ import { ProjectSetupCheck } from '../checks/ProjectSetupCheck';
 import { ReactNativeDirectoryCheck } from '../checks/ReactNativeDirectoryCheck';
 import { StoreCompatibilityCheck } from '../checks/StoreCompatibilityCheck';
 import { SupportPackageVersionCheck } from '../checks/SupportPackageVersionCheck';
+import { ThirdPartyUpdatesLibraryCheck } from '../checks/ThirdPartyUpdatesLibraryCheck';
 import { VectorIconsCheck } from '../checks/VectorIconsCheck';
 import type { DoctorCheck } from '../checks/checks.types';
 import {
@@ -59,6 +60,7 @@ export function resolveChecksInScope(exp: ExpoConfig, pkg: PackageJSONConfig): D
     new ExpoRouterReactNavigationCheck(),
     new AutolinkingDependencyDuplicatesCheck(),
     new VectorIconsCheck(),
+    new ThirdPartyUpdatesLibraryCheck(),
 
     // Version Checks
     new SupportPackageVersionCheck(),
